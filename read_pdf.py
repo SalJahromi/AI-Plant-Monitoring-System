@@ -12,7 +12,6 @@ def extract_pdf_text(pdf_path):
 
     Output:
     pages_text: a list of dict, holding textual content of each page of pdf.
-    
     """
 
     pdfReader = PdfReader(pdf_path)
@@ -29,7 +28,6 @@ def extract_pdf_text(pdf_path):
 
 
 def text_to_chunk(text, chunk_size=800, overlap = 100):
-
 
     chunks = []
     start = 0
@@ -93,7 +91,4 @@ if __name__ == "__main__":
                    metadatas=metadata
                    )
     print(f"Stored {len(documents)} chunks in ChromaDB.")
-    # text = extract_pdf_text("docs/begonia.pdf")
 
-
-    # print(text_to_chunk(text[0].get('text')))
