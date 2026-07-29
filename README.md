@@ -3,9 +3,13 @@
 
 # 🌱 AI Smart Plant Agent
 
-An AI-powered smart plant monitoring system that combines **Arduino**, **local LLMs (LM Studio)**, **Retrieval-Augmented Generation (RAG)**, and **Machine Learning** to create an interactive plant that can monitor its environment, converse naturally, diagnose its health, and safely control its own irrigation.
+This is a personal passion project.
 
-The project demonstrates the integration of embedded systems with modern AI while keeping all inference completely local.
+An AI-powered smart plant monitoring system that combines **Arduino**, **local LLMs (LM Studio)**, **Retrieval-Augmented Generation (RAG)**, and **Machine Learning** to create an AI plant agent with access to sensor data, being able to monitor its environment, converse naturally, diagnose its health, and safely control its own irrigation.
+
+In simple terms, the program receives a pdf holding information about a particular plant. Then, the AI agent pretends to be that plant, mimicing emotions, and "feeling" its own conditions by accessing real-time sensor readings.
+
+The project demonstrates the integration of embedded systems with modern AI.
 
 ---
 
