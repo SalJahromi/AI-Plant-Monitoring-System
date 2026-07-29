@@ -1,59 +1,49 @@
 # AI-Plant-Monitoring-System
 
 
+# 🌱 AI Smart Plant Agent
 
-A local AI plant-care system that combines an Arduino, environmental sensors, retrieval-augmented generation, a local language model, and machine-learning-based plant health prediction.
+An AI-powered smart plant monitoring system that combines **Arduino**, **local LLMs (LM Studio)**, **Retrieval-Augmented Generation (RAG)**, and **Machine Learning** to create an interactive plant that can monitor its environment, converse naturally, diagnose its health, and safely control its own irrigation.
 
-The plant can describe how it feels, answer questions using plant-specific care documentation, evaluate live sensor readings, request permission to water itself, and activate a water pump only after passing Python-side safety checks.
+The project demonstrates the integration of embedded systems with modern AI while keeping all inference completely local.
 
-Features
-*Reads temperature, humidity, soil moisture, and light levels from an Arduino
-*Communicates with a locally hosted LLM through LM Studio
-*Retrieves plant-care information from PDF documents using ChromaDB
-*Generates embeddings with Sentence Transformers
-*Speaks in first person as the monitored plant
-*Displays different emotional states on the Arduino
-*Requests permission before automatically suggested watering
-*Accepts direct user watering commands
-*Uses Python guardrails before activating the pump
-*Runs a machine-learning model to predict plant health
-*Provides a simple Tkinter conversation window
-*Performs periodic automatic sensor evaluations
+---
 
+## Features
 
-System Overview
-Plant-care PDF
-      |
-      v
-PDF extraction and chunking
-      |
-      v
-Sentence Transformer embeddings
-      |
-      v
-ChromaDB vector database
-      |
-      +------------------------------+
-                                     |
-User message                        |
-      |                              |
-      v                              v
-Python application ----------> Relevant PDF context
-      |                              |
-      +--------------+---------------+
-                     |
-                     v
-              Local LLM server
-                LM Studio
-                     |
-                     v
-             Structured JSON response
-                     |
-                     v
-          Python validation and guardrails
-                     |
-          +----------+-----------+
-          |                      |
-          v                      v
- Arduino display/message     Water pump command
-                             only when authorized
+- 🌡️ Reads live sensor data from an Arduino
+  - Temperature
+  - Humidity
+  - Soil moisture
+  - Light intensity
+
+- 🤖 Local AI assistant powered by LM Studio
+  - Natural conversations
+  - Plant roleplaying
+  - Context-aware responses
+
+- 📚 Retrieval-Augmented Generation (RAG)
+  - Reads plant-care PDF documents
+  - Stores embeddings in ChromaDB
+  - Retrieves relevant context before every response
+
+- 🧠 Machine Learning integration
+  - Predicts plant health from live sensor readings
+  - LLM explains ML predictions naturally
+
+- 💧 Safe autonomous watering
+  - Plant can request permission to water itself
+  - Python validates every watering request
+  - Automatic sensor updates **cannot** activate the pump without approval
+
+- 😊 Emotional plant responses
+  - Happy
+  - Neutral
+  - Sad
+  - Angry
+
+- 💬 Live chat interface
+  - Tkinter conversation window
+  - Conversation memory
+
+---
